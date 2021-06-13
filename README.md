@@ -1,2 +1,3 @@
-# IBM_Data_Science_Beginner_Level_Professional_Certificate
-This repo was created for online coursera data science course !
+# IBM_Data_Science_Professional_Certificate
+
+This repository includes projects , code assignments , quizzes and this kind of stuffs from my online coursera Data Science Professional Certificate courses which is thought by IBM. I think also that using this github repo for my business works in my future projects.

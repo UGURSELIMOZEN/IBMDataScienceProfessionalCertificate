@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <h1>Hands-on LAB: Composing and Running Basic SQL Queries</h1>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/IDSNlogo.png" width="200" height="200">
+    <h2>Objectives</h2>
+    <p>At the end of this lab you will be able to</p>
+    <ul>
+      <li>Compose and run basic queries</li>
+    </ul>
+    <h2>Lab: Composing and Running basic SQL queries</h2>
+    <p>So far in this module you learned about the five basic SQL statements to create tables, insert data, select results, update, and delete data. In this lab, you will practice composing and running these statements via hands-on experiences.</p>
+    <p>To write and execute the SQL statements in this lab, you will need to launch the SQL editor (Run SQL) in your Db2 database instance on IBM Cloud that you created in the previous lab.</p>
+    <p><strong>NOTE</strong>: Some users have reported issues performing this lab using Microsoft Edge. It is recommended using Google Chrome or Mozilla Firefox as your web browser to complete these labs.</p>
+    <p>First you will launch the SQL editor in the Db2 console using the following steps:</p>
+    <p>1) Go to your IBM Cloud dashboard (you may need to log into IBM Cloud in the process):</p>
+    <p><a href="https://cloud.ibm.com/resources?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork-20127838&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://cloud.ibm.com/resources</a></p>
+    <p>2) Expand the Cloud Foundry Services and locate and click on your instance of Db2 you provisioned in the previous lab (the name typically starts with Db2-xx for example Db2-fk, Db2-50, etc.)</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/ServicesDb2xx.PNG" alt="image">
+    </p>
+    <p>3) Click on the <strong>Open Console</strong> button.</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/Db2xxOpenConsole.png" alt="image">
+    </p>
+    <p>4) The Db2 console will open in a new tab in your web browser. Click on the 3 bar menu icon in the top left corner and then click on RUN SQL.</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/Run_SQL.jpg" alt="image">
+    </p>
+    <p>On the next screen click on "Blank"</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/RunSQL-Blank.png" alt="image">
+    </p>
+    <p>5) The SQL editor will open where you can start typing and running queries.</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/SQLeditor.png" alt="image">
+    </p>
+    <p>The SQL editor has several areas for different things:</p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/SQLEditorZones.png" alt="image">
+    </p>
+    <p>Now let’s practice creating and running some SQL queries in the SQL editor.</p>
+    <p>Consider the following table called <strong>INSTRUCTOR:</strong></p>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/images/Instructor.jpg" alt="image">
+    </p>
+    <p><strong>Task 0:</strong> Drop the table INSTRUCTOR from the database in case it already exists, so that we start from a clean state.</p>
+    <p>(Hint: Ignore the undefined error if this table does not already exist in your database)</p>
+    <p><strong>Task 1:</strong> Create the INSTRUCTOR table as defined above. Have the ins_id be the primary key, and ensure the lastname and firstname are not null.</p>
+    <p>(Hint: ins_id is of type INTEGER, country of type CHAR(2), and rest of the fields VARCHAR)</p>
+    <p><strong>Task 2A:</strong> Insert one row into the INSTRUCTOR table for the the instructor Rav Ahuja.</p>
+    <p>(Hint: values for the character fields require a singe quotation mark (') before and after each value)</p>
+    <p><strong>Task 2B:</strong> Insert two rows at once in the INSTRUCTOR table for instructors Raul Chong and Hima Vasudevan.</p>
+    <p>(Hint: list the values for the second row after the first row)</p>
+    <p><strong>Task 3:</strong> Select all rows from the INSTRUCTOR table.</p>
+    <p><strong>Task 3B:</strong> Select the firstname, lastname and country where the city is Toronto</p>
+    <p><strong>Task 4:</strong> Update the row for Rav Ahuja and change his city to Markham.</p>
+    <p><strong>Task 5:</strong> Delete the row for Raul Chong from the table.</p>
+    <p><strong>Task 5B:</strong> Retrieve all rows in the INSTRUCTOR table</p>
+    <p>Solutions for Lab Tasks</p>
+    <p>Please try the above tasks on your own and only use the solutions if you need a hint or want to verify your queries.</p>
+    <p><strong>NOTE:</strong> You can type multiple SQL queries in the SQL editor. Just type the query terminator character after each query. The default terminator is the semi-colon ;</p>
+    <p>Comments by default are preceded with a double dash --</p>
+    <p>So if you copy and paste all of the queries in the file below into the SQL editor and then <strong>Run -> Run All</strong>, all of the queries will be executed.</p>
+    <p>Here are the solutions:</p>
+    <p><a href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/scripts/Lab2-solution-Script.sql">Lab2-solution-Script.sql.txt</a></p>
+    <h2>Author(s)</h2>
+    <h4>Rav Ahuja</h4>
+    <h4></h4>
+    <h3>Other Contributor(s)</h3>
+    <p>Malika Singla</p>
+    <h2>Changelog</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-08-31</td>
+          <td>2.0</td>
+          <td>Malika Singla</td>
+          <td>Markdown file creation</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>

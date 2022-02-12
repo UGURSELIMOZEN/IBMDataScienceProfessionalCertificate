@@ -4,5 +4,5 @@ This repository includes projects , code assignments , quizzes and this kind of 
 
 </br>
 </br>
-<img width="1120" heigth="720" alt="dashboard1" src="https://github.com/UGURSELIMOZEN/IBMDataScienceProfessionalCertificate/blob/main/IBM%20Data%20Science%20Professional%20Certificate.jpg">
+<img width="1200" heigth="800" alt="dashboard1" src="https://github.com/UGURSELIMOZEN/IBMDataScienceProfessionalCertificate/blob/main/IBM%20Data%20Science%20Professional%20Certificate.jpg">
 
